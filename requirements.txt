@@ -1,0 +1,29 @@
+# Core ML
+torch
+torchvision
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+opencv-python
+pillow
+tqdm
+
+# Experiment tracking
+mlflow
+
+# API and Dashboard
+fastapi
+uvicorn[standard]
+python-multipart
+streamlit
+plotly
+requests
+
+# Anomaly detection library
+anomalib
+
+# Notebooks
+jupyter
+ipykernel
