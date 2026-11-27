@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FastAPI Server",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Streamlit Dashboard",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe -m streamlit run app/dashboard.py --server.port 8501",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run MLflow UI",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe -m mlflow ui --backend-store-uri sqlite:///mlflow.db --host 127.0.0.1 --port 5000",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests (pytest)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\venv\\Scripts\\python.exe -m pytest tests/ -v",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
